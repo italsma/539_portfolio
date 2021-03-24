@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- add new shortcut icon -->
+    <link rel="shortcut icon" type="image/png" href="images/logo_icon.png"/>
+    <link rel="stylesheet" type="text/css" href="css/html5reset.css">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <!-- import font -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=PlayfairDisplay">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=OpenSans">
+
+
+    <title>The Annex Garden - Home</title>
+
+    <!-- JavaScript Code -->
+    <!-- Hamburger Menu for Mobile -->
+    <script>
+    function myFunction() {
+      var x = document.getElementById("myTopnav");
+      if (x.className === "topnav") {
+        x.className += " responsive";
+      } else {
+        x.className = "topnav";
+      }}
+  </script>
+
+  <!-- Social Icons -->
+  <script src="https://unpkg.com/ionicons@5.4.0/dist/ionicons.js"></script>
+
+
+  </head>
+
+
+
+
+<!-- Start body code -->
+<body>
+    <div a class="skip"><a href="#main">Skip to Main Content</a></div >
+      <!-- Top Navigation Menu from https://www.w3schools.com/howto/howto_js_topnav_responsive.asp -->
+      <!-- Load an icon library to show a hamburger menu (bars) on small screens -->
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+      <nav>
+      <div class="topnav" id="myTopnav">
+        <a href="index.html"><img class="logo" src="images/logo_wordmark_draft_400px.png" alt="Annex Garden logo" id = "logo">
+        <a href="index.html" class="active">Home</a>
+        <a href="gardening.html">Gardening</a>
+        <a href="beekeeping.html">Beekeeping</a>
+        <a href="resources.html">Resources</a>
+        <a href="contact.html">Contact</a>
+        <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+          <i class="fa fa-bars"></i>
+        </a>
+      </nav>
+      </div>
+  
+    <!-- https://www.imarketinx.de/artikel/text-centered-on-image.html / https://codepen.io/drralte/pen/vYNexoe -->
+    <header id="main">
+      <div>
+      <h1>Welcome</h1>
+      <p>A small paragraph explaining purpose of the site.</p>
+      </div>
+    </header>
+
+    <main>
+      <div class="box-grid">
+        <div class="box-flex box-flex-center">
+          <img class="box-img" src="images/garden_background_square.JPG" alt="Garden cosmos" title="" width="600">
+          <h5 class="box-caption">Gardening</h5>
+        </div><!-- end: box-flex -->
+      
+        <div class="main-paragraph">
+          <p>Learn about what's getting planted in the garden this season.</p>
+      </div>
+      
+    </div><!-- end: box.grid -->
+     
+      <hr class="solid">
+
+      <div class="box-grid">
+        <div class="box-flex box-flex-center">
+          <img class="box-img" src="images/beekeeping_background_square.jpg" alt="Bees on honeycomb" title="" width="600">
+          <h5 class="box-caption">Beekeeping</h5>
+        </div><!-- end: box-flex -->
+        <div class="main-paragraph">
+          <p>See what's buzzing in the backyard hives.</p>
+      </div>
+      </div><!-- end: box.grid -->
+      
+      <hr class="solid">
+
+      <div class="box-grid">
+        <div class="box-flex box-flex-center">
+          <img class="box-img" src="images/garden_tools_square.jpg" alt="Garden tools on table" title="" width="600">
+          <h5 class="box-caption">Resources</h5>
+        </div><!-- end: box-flex -->
+        <div class="main-paragraph">
+          <p>Explore my favorite resources for inspiration and information on starting your own garden.</p>
+      </div>
+      </div><!-- end: box.grid -->
+
+
+    </body>
+  </main>
+  
+  <footer>
+    <!-- Bootstrap footer instructions https://www.web-eau.net/blog/10-best-footer-html-css-snippets -->
+    <!-- Instagram icon instructions https://ionicons.com/usage -->
+    <p class="primary-paragraph">Want to learn more? Follow along with the growing season!</p>
+    <ion-icon name="logo-instagram"></ion-icon>
+    <p class="main-paragraph secondary-footer">&copy; Isabel Talsma – 2021</p>
+  </footer>
+
+  </body>
+</html>
