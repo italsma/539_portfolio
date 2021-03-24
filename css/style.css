@@ -21,6 +21,23 @@ header, main {
   text-align: center;
 }
 
+h1 {
+  font-family: 'Playfair Display', Georgia, 'Times New Roman', Times, serif;
+  font-size: 1.5em;
+}
+
+.page-header-paragraph{
+  padding-top: 1em;
+  line-height: 1.25em;
+}
+
+.page-header-supporting{
+  padding-top: 1em;
+  padding-bottom: 1em;
+  font-style: italic;
+  line-height: 1.25em;
+}
+
 .logo { 
   height:50px;
   padding: 0px;
@@ -304,7 +321,7 @@ h3 {
 
 .bee-image{
   display:inline-block;
-  margin-top:30px;
+  margin-top:20px;
   transition: all 0.8s;
 }
 
@@ -328,14 +345,15 @@ figure {
 
 .beekeeping-img{
   /* border: 1px solid grey; */
-  width: 300px;
-  height:300px;
+  width: 250px;
+  height:250px;
   /* box-shadow: 0px 0px 5px 0px #5B7C50; */
 }
 
 figcaption{
   opacity: 0;
-  max-width: 300px;
+  background-color: #f7f6f3;
+  max-width: 250px;
   line-height: 1.5em;
   margin-top: 10px;
   text-align:left;
