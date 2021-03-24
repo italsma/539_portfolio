@@ -1,0 +1,146 @@
+* { box-sizing: border-box;}
+
+* {
+  border: 1px solid red;
+}
+
+/* Garden Gallery */
+.gallery{
+  /* height: 1%; */
+  display: flex;
+  flex-flow: row wrap;
+  align-content: space-between;
+  justify-content: center;
+  margin: 0 auto;
+  /* align-content: space-around; */
+
+}
+
+.card{
+  margin: 1em;
+
+  /* width: 250px; */
+  border: 14px solid #EEEDE7;
+  /* display: flex; */
+  /* flex-flow: row wrap; */
+  /* justify-content: center; */
+  /* align-content: space-around; */
+
+}
+
+@import "https://fonts.googleapis.com/css?family=Josefin+Sans:400,700";
+/* body {
+  margin: 0;
+  padding: 0;
+  font-family: "Josefin Sans", sans-serif;
+  background-color: #eee;
+}
+body a {
+  color: #ffffff;
+  text-decoration: none;
+} */
+
+.card {
+  /* position: float; */
+  top: 50%;
+  left: 50%;
+  height: 400px;
+  width: 400px;
+  /* transform: translate(-50%, -50%); */
+  transform-style: preserve-3d;
+  perspective: 600px;
+  transition: 0.5s;
+}
+
+.card:hover .card-front {
+  transform: rotateY(-180deg);
+}
+.card:hover .card-back {
+  transform: rotateY(0deg);
+}
+
+.card-front{
+  height: 100%;
+  width: 100%;
+  /* background-image: url('../images/plants/final/snapdragon_square.JPG'); */
+  background-position: 50% 50%;
+  background-size: cover;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: #F7F6F3;
+  backface-visibility: hidden;
+  transform: rotateY(0deg);
+  transition: 1s;
+}
+
+.card-front-1{
+  background-image: url('../images/plants/final/snapdragon_square.JPG');
+}
+
+.card-front-2 {
+  background-image: url('../images/plants/final/chocolatelaceflower_square.JPG');
+}
+
+.card-front-3 {
+  background-image: url('../images/plants/final/strawflower_square.JPG');
+}
+
+.card-front-4 {
+  background-image: url('../images/plants/final/sunflower_square.JPG');
+}
+
+.card-front-5 {
+  background-image: url('../images/plants/final/sweetpea_square.jpg');
+}
+
+.card-front-6 {
+  background-image: url('../images/plants/final/zinnia_square.JPG');
+}
+
+.card-front-7 {
+  background-image: url('../images/plants/final/cosmos_square.JPG');
+}
+
+.card-front-8 {
+  background-image: url('../images/plants/final/marigold_square.JPG');
+}
+
+.card-front-9 {
+  background-image: url('../images/plants/final/peony_square.JPG');
+}
+
+.card-front span {
+  background-color: greenyellow;
+  margin: 0 auto;
+  font-size: 16px;
+  font-style:oblique;
+  font-family: 'Open Sans', Verdana, Geneva, sans-serif;
+}
+
+.card-back {
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: #F7F6F3;
+  border: 4px solid #BCD2B3;
+  backface-visibility: hidden;
+  transform: rotateY(180deg);
+  transition: 1s;
+  color: black;
+  text-align: center;
+  padding: 2em;
+}
+.card-back h2 {
+  margin: 15% auto 50% auto;
+  font-family: 'playfair display', georgia, serif;
+  font-size: 26px;
+}
+.card-back h2 span {
+  margin: 50% auto 35% auto;
+  font-size: 16px;
+  font-style:oblique;
+  font-family: 'Open Sans', Verdana, Geneva, sans-serif;
+}
