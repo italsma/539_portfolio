@@ -29,11 +29,11 @@ h1 {
   font-size: 1.5em;
 }
 
-h2 {
+/* h2 {
   margin-left: 2em;
   text-align:left;
   margin-bottom: 1em;
-}
+} */
 
 h3 {
   margin-left: 2em;
@@ -171,12 +171,13 @@ hr.solid {
 
 .main-paragraph {
   font-family: 'Open Sans', Verdana, Geneva, sans-serif;
-  padding-top: 1em;
+  padding-top: .75em;
+  line-height: 1.25em;
 }
 
 
 
-/* Main Page - images with caption overlay [CITE] */
+/* Main Page - images with caption overlay [CITATION: https://www.imarketinx.de/artikel/text-centered-on-image.html / https://codepen.io/drralte/pen/vYNexoe] */
 /* The Container */
 .box-grid {
   display: -ms-grid;
@@ -185,6 +186,11 @@ hr.solid {
   /* grid-gap: 1.5rem; */
   justify-items: center;
   padding: 0;
+}
+
+.index-link {
+  text-decoration: none;
+  color: black;
 }
 
 /* Styles for the caption overlays */
@@ -225,13 +231,14 @@ hr.solid {
   padding: .5rem;
   word-break: break-word;
   font-size: 1.25rem;
-  background-color: rgba(0,0,0,.6);
-  color: #F7F6F3;
+  /* background-color: rgba(0,0,0,.6); */
+  background-color: rgba(247, 246, 243, .9);
+  color: black;
 }
 
 .box-caption:hover {
-  background-color: rgba(0,0,0,1);
-  color: #F7F6F3;
+  background-color: rgba(247, 246, 243,1);
+  /* color: #F7F6F3; */
   transition: ease-in-out .5s;
  /*how to ease out at same rate?*/
 }
@@ -290,9 +297,9 @@ footer{
 }
 
 .parallax-banner-text {
-  display: flex;
+  /* display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: center; */
   /* margin: 0 auto; */
   /* text-align: center; */
   padding: 10px;
@@ -345,7 +352,7 @@ footer{
 .resource-link:hover {
   text-decoration: underline 1px;
   /* color:rgba(91, 124, 80, .75); */
-  color: #A7C09D;
+  color: #BCD2B3;
 }
 
 /* Resources - END */

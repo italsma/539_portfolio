@@ -1,8 +1,8 @@
 * { box-sizing: border-box;}
 
-* {
+/* * {
   border: 1px solid red;
-}
+} */
 
 /* Garden Gallery */
 .gallery{
@@ -43,27 +43,30 @@ body a {
   /* position: float; */
   top: 50%;
   left: 50%;
-  height: 400px;
-  width: 400px;
+  height: 350px;
+  width: 350px;
   /* transform: translate(-50%, -50%); */
   transform-style: preserve-3d;
   perspective: 600px;
   transition: 0.5s;
 }
 
-.card:active .card-front {
+.card-header {
+  text-align: center;
+}
+/* .card:active .card-front {
   transform: rotateY(-180deg);
 }
 .card:active .card-back {
   transform: rotateY(0deg);
-}
+} */
 
-/* .card:hover .card-front {
+.card:hover .card-front {
   transform: rotateY(-180deg);
 }
 .card:hover .card-back {
   transform: rotateY(0deg);
-} */
+}
 
 .card-front{
   height: 100%;
