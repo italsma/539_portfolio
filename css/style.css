@@ -277,10 +277,10 @@ footer{
 }
 
 .banner-image{
-  background-attachment: fixed; /* Parallax effect */     
+  /* background-attachment: fixed;*/ /* turn on for Parallax effect*/
   background-position: center;  /* Parallax effect */
   background-repeat: no-repeat; /* Parallax effect */
-  background-size: cover;       /* Parallax effect */
+  background-size: 100%;       /* Parallax effect, should be :cover */
   color: black;
   height: 100px;                /* Parallax effect */
   margin-bottom: 25px;
@@ -312,15 +312,19 @@ footer{
 
 
 .gardening-image {
-  background-image: url("../images/plants/IMG_0458.JPG");
+  /* background-image: url("../images/plants/IMG_0458.JPG"); */
+  background-image: url("../images/plants/gardening_resources2_mobile.jpg");
 }
 
 .beekeeping-image {
-  background-image: url("../images/bees/beekeeping_background.JPG");
+  /* background-image: url("../images/bees/beekeeping_background.JPG"); */
+  background-image: url("../images/bees/beekeeping_background_mobile.jpg");
 }
 
 .misc-image {
-  background-image: url("../images/eco-warrior-princess-TsOeGUwWzWo-unsplash.jpg");
+  /* background-image: url("../images/eco-warrior-princess-TsOeGUwWzWo-unsplash.jpg"); */
+  /*add image credit*/
+  background-image: url("../images/tools_resources_mobile.jpg");
 }
 /* Resource Lists */
 
