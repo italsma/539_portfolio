@@ -1,15 +1,15 @@
 * { box-sizing: border-box;}
 
-* {
+/* * {
   border: 1px solid red;
-}
+} */
+
+@import url('https://fonts.googleapis.com/css?family=Playfair+Display');
+@import url('https://fonts.googleapis.com/css?family=Open+Sans');
 
 html {
   font-size: 100%;
 }
-
-@import url('https://fonts.googleapis.com/css?family=Playfair+Display');
-@import url('https://fonts.googleapis.com/css?family=Open+Sans');
 
 body {
   padding: 0;
@@ -29,9 +29,22 @@ h1 {
   font-size: 1.5em;
 }
 
+h2 {
+  margin-left: 2em;
+  text-align:left;
+  margin-bottom: 1em;
+}
+
+h3 {
+  margin-left: 2em;
+  text-align:left;
+  margin-bottom: 1em;
+}
+
 .page-header-paragraph{
   padding-top: 1em;
   line-height: 1.25em;
+  padding-bottom: 1em;
 }
 
 .page-header-supporting{
@@ -247,29 +260,50 @@ footer{
   grid-row-gap: 20px;
 } */
 
+.grid-container {
+  display: grid;
+  /* max-width: 375px; */
+  /* grid-template-columns: 1fr 2fr 1fr; */
+  grid-template-columns: 1fr;
+  /* grid-template-rows: auto; */
+  /* grid-row-gap: 20px; */
+}
+
 .banner-image{
   background-attachment: fixed; /* Parallax effect */     
   background-position: center;  /* Parallax effect */
   background-repeat: no-repeat; /* Parallax effect */
   background-size: cover;       /* Parallax effect */
-  color: white;
+  color: black;
   height: 100px;                /* Parallax effect */
-    
-  /*Req 6a*/
   margin-bottom: 25px;
+  display: grid;
+  grid-template-rows: 1fr 1fr 1fr;
+  grid-template-columns: auto auto auto;
+  /* grid-column: 2 / span 1; */
+}
+
+.h2-grid{
+  /* grid-column: 2 / span 1;
+  grid-row: 2; */
+  line-height: 1.25em;
 }
 
 .parallax-banner-text {
-  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* margin: 0 auto; */
+  /* text-align: center; */
+  padding: 10px;
+  grid-row: 2;
+  grid-column: 2;
+  background-color: rgba(247, 246, 243, .9);
   font-family: 'Playfair Display', Georgia, serif;
-  font-size: 2em;
+  font-size: 1.5em;
 }
 
-h3 {
-  margin-left: 2em;
-  text-align:left;
-  margin-bottom: 1em;
-}
+
 .gardening-image {
   background-image: url("../images/plants/IMG_0458.JPG");
 }
@@ -282,18 +316,14 @@ h3 {
   background-image: url("../images/eco-warrior-princess-TsOeGUwWzWo-unsplash.jpg");
 }
 /* Resource Lists */
-.container-grid {
-  display: grid;
-  grid-template-columns: 1fr;
-  grid-template-rows: auto;
-  grid-row-gap: 20px;
-}
+
 
 .resource-list {
   margin: 0 2em 0 2em;
   text-align: left;
   line-height: 1.5;
   /* margin-bottom: .5em; */
+  /* grid-column: 2 / span 1; */
 }
 
 .last-list{
@@ -314,6 +344,8 @@ h3 {
 
 .resource-link:hover {
   text-decoration: underline 1px;
+  /* color:rgba(91, 124, 80, .75); */
+  color: #A7C09D;
 }
 
 /* Resources - END */
@@ -348,15 +380,15 @@ figure {
 
 .beekeeping-img{
   /* border: 1px solid grey; */
-  width: 250px;
-  height:250px;
+  width: 200px;
+  height:200px;
   /* box-shadow: 0px 0px 5px 0px #5B7C50; */
 }
 
 figcaption{
   opacity: 0;
   background-color: #f7f6f3;
-  max-width: 250px;
+  max-width: 200px;
   line-height: 1.5em;
   margin-top: 10px;
   text-align:left;

@@ -28,7 +28,6 @@
 
 }
 
-@import "https://fonts.googleapis.com/css?family=Josefin+Sans:400,700";
 /* body {
   margin: 0;
   padding: 0;
@@ -52,12 +51,19 @@ body a {
   transition: 0.5s;
 }
 
-.card:hover .card-front {
+.card:active .card-front {
+  transform: rotateY(-180deg);
+}
+.card:active .card-back {
+  transform: rotateY(0deg);
+}
+
+/* .card:hover .card-front {
   transform: rotateY(-180deg);
 }
 .card:hover .card-back {
   transform: rotateY(0deg);
-}
+} */
 
 .card-front{
   height: 100%;
