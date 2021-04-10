@@ -5,6 +5,8 @@
 } */
 
 /* Garden Gallery */
+
+/* Flip card code based on: https://codepen.io/DmitryKorobov/pen/LrWxKO */
 .gallery{
   /* height: 1%; */
   display: flex;
