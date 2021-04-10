@@ -29,6 +29,15 @@
   <!-- Social Icons -->
   <script src="https://unpkg.com/ionicons@5.4.0/dist/ionicons.js"></script>
 
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-8YGLNFMPVF"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+  
+    gtag('config', 'G-8YGLNFMPVF');
+  </script>
 
   </head>
 
@@ -70,23 +79,26 @@
       <div class="typewriter-text animation">Say hello!</div> </div>
     <div class="underline">
     </div>
-    <div class="icon_wrapper">
-    </div>
+    <!-- <div class="icon_wrapper">
+    </div> -->
     <form action="https://formspree.io/f/mjvjvjer" method="post" id="contact_form">
       <div class="name">
-        <label for="name"></label>
+        <label for="name_input" class="form-label">Name</label>
         <input type="text" placeholder="Name" name="name" id="name_input" required>
       </div>
+
       <div class="email">
-        <label for="email"></label>
+        <label for="email_input" class="form-label">Telephone</label>
         <input type="email" placeholder="Telephone" name="email" id="email_input">
       </div>
+
       <div class="telephone">
-        <label for="name"></label>
+        <label for="telephone_input" class="form-label">Email</label>
         <input type="text" placeholder="Email" name="telephone" id="telephone_input" required>
       </div>
+
       <div class="subject">
-        <label for="subject"></label>
+        <label for="subject_input" class="form-label">Subject Line</label>
         <select placeholder="Subject line" name="subject" id="subject_input" required>
           <option disabled hidden selected>I want to talk about...</option>
           <option>I want to order some honey!</option>
@@ -95,10 +107,12 @@
           <option>I have a garden tip to share!</option>
         </select>
       </div>
+
       <div class="message">
-        <label for="message"></label>
+        <label for="message_input" class="form-label">Write message here</label>
         <textarea name="message" placeholder="Write your message here" id="message_input" cols="30" rows="5" required></textarea>
       </div>
+
       <div class="submit">
         <input type="submit" value="Send Message" id="form_button" />
       </div>
