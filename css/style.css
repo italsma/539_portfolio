@@ -794,12 +794,12 @@ hr.solid {
 
 .banner-image {
   grid-column: span 2;
-  background-attachment: fixed; /* Parallax effect */     
-  background-position: center;  /* Parallax effect */
-  background-repeat: no-repeat; /* Parallax effect */
-  background-size: cover;       /* Parallax effect */
+  /* background-attachment: fixed; Parallax effect      */
+  /* background-position: center;  Parallax effect */
+  /* background-repeat: no-repeat; Parallax effect */
+  /* background-size: cover;       Parallax effect */
   /* color: white; */
-  /* height: 400px;                Parallax effect */
+  height: 12vh;
 }
 
 .grid-subheader{
@@ -878,5 +878,10 @@ hr.solid {
 @media (prefers-reduced-motion: reduce) {
   .animation {
     animation: none;
+  }
+
+  /*Turn off parallax on resources page*/
+  .banner-image{
+    background-attachment: initial;
   }
 }
