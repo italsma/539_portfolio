@@ -443,6 +443,10 @@ figcaption{
   margin: 30px 0px 20px 0px;
 }
 
+.form-label {
+  display: none;
+}
+
 .typewriter-text {
   display: inline-block;
   overflow: hidden;
