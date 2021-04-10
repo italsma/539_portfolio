@@ -156,3 +156,39 @@ body a {
   /* font-style:oblique; */
   font-family: 'Open Sans', Verdana, Geneva, sans-serif;
 }
+
+@media screen and (max-width:992px), (prefers-reduced-motion: reduce) {
+  /* Turn off flip card on Gardening page*/
+  .card:hover .card-front, .card:focus-within {
+    /* transform: rotateY(-180deg); */
+    transform: none;
+    /* opacity: 0; */
+    /* backface-visibility: visible; */
+
+  }
+  .card {
+    transition: 0s;
+  }
+  .card-front{
+    transform: none;
+    opacity: 1;
+    transition: 0s;
+  }
+
+  .card-front:hover{
+    transform: none;
+    opacity: 0;
+  }
+
+  .card-back {
+    transform: none;
+    opacity: 0;
+    transition: 0s;
+  }
+
+  .card-back:hover {
+    transform: none;
+    opacity: 1;
+  }
+}
+
