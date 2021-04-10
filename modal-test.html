@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" type="text/css" href="css/modal-test.css">
+</head>
+<body>
+
+    <head>
+        <link href="https://fonts.googleapis.com/css?family=Oswald" rel="stylesheet">
+      </head>
+      
+      <section class="galleryWrapper">
+        <h1 class="header">Click Image to Enlarge</h1>
+        
+        <div class="imageContainer clearfix">
+          <a class="imageLink" href="images/bees/beesuit_square.JPG" title="Beekeeper standing next to two beehives.">
+            <img class="image" src="images/bees/beesuit_square.JPG" alt="Beekeeping is a team sport and it's always good to bring a friend (or family member)!">
+          </a>
+
+          <a class="imageLink" href="images/bees/insidehive_square.JPG" title="Honeybees inside their hive.">
+            <img class="image" src="images/bees/insidehive_square.JPG" alt="An inside look into the 'super,' where the colony stores their honey. A small super can hold up to 30lbs of honey.">
+          </a>
+          
+          <a class="imageLink" href="images/bees/combandeggs_square.JPG" title="Bee eggs in wax comb.">
+            <img class="image" src="images/bees/combandeggs_square.JPG" alt="The queen bee lays her eggs, which look like small grains of rice, in the wax cells. She can lay up to 1,500 eggs a day. (That's a lot of bees!)">
+          </a>
+          
+          <a class="imageLink" href="images/bees/brood_square.jpg" title="Frame of bees and brood">
+            <img class="image" src="images/bees/brood_square.jpg" alt="Baby bees are also called 'brood.' This full frame of brood is also the sign of a healthy queen.">
+          </a>
+
+          <a class="imageLink" href="images/bees/Dorset+Gold_6.jpg" title="Three jars of honey on white background.">
+            <img class="image" src="images/bees/Dorset+Gold_6.jpg" alt="After the honey is extracted from the hive, it gets packaged in jars with a special, homemade label. Perfect for gifting!">
+          </a>
+
+        </div>  <!-- /imageContainer-->
+        
+        <div class="overlayContainer">
+          
+          <div class="imageBox">
+            <div class="relativeContainer">
+              <img class="largeImage" src="" alt="">
+              <p class="imageCaption"></p>
+            </div>  <!-- /relativeContainer -->
+          </div>  <!-- /imageBox -->
+          
+        </div>  <!-- overlayContainer -->
+        
+      </section>  <!-- /galleryWrapper -->
+
+<script>
+(function() {
+  
+  let overlay = document.querySelector('.overlayContainer'),
+      largeImage = document.querySelector('.largeImage');
+      
+  const hideOverlay = () => {
+    overlay.removeEventListener('click', hideOverlay, false);
+    overlay.classList.remove('opacity');
+    
+    setTimeout(function() {
+      largeImage.removeAttribute('src');
+      largeImage.removeAttribute('alt');
+      overlay.classList.remove('display');
+    }, 400);
+  }
+  
+  function lightbox(event) {
+    const caption = document.querySelector('.imageCaption');
+    let href, alt;
+    
+    event.preventDefault();
+    href = this.getAttribute('href');
+    alt = this.children[0].getAttribute('alt');
+    
+    largeImage.setAttribute('src', href);
+    largeImage.setAttribute('alt', alt);
+    caption.innerHTML = alt;
+    overlay.classList.add('display');
+    
+    setTimeout(function() { overlay.classList.add('opacity'); }, 25);
+    setTimeout(function() { overlay.addEventListener('click', hideOverlay, false); }, 400);
+  }
+    
+  /***Event Listener***/
+  const runCode = () => {
+    const image = document.querySelectorAll('.imageLink');
+    if ( image ) {
+      for ( var i = 0; i < image.length; i++ ) {
+        image[i].addEventListener('click', lightbox, false);
+      }
+    }
+  }
+  
+  runCode();
+  
+})();
+</script>
+
+</body>
+</html>

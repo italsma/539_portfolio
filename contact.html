@@ -33,45 +33,83 @@
   </head>
 
 
-
+  <nav>
+    <div class="topnav" id="myTopnav">
+      <a class="topnav-logo" href="index.html"><img class="logo" src="images/logo_wordmark_draft_400px.png" alt="Annex Garden logo" id = "logo">
+        <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+          <i class="fa fa-bars"><span>Open</span></i>
+        </a>
+        <a href="index.html">Home</a>
+        <a href="gardening.html">Gardening</a>
+        <a href="beekeeping.html">Beekeeping</a>
+        <a href="resources.html">Resources</a>
+        <a href="contact.html" class="active">Contact</a>
+      </div>
+    </nav>
 
 <!-- Start body code -->
+<main>
 <body>
     <div a class="skip"><a href="#main">Skip to Main Content</a></div >
       <!-- Top Navigation Menu from https://www.w3schools.com/howto/howto_js_topnav_responsive.asp -->
       <!-- Load an icon library to show a hamburger menu (bars) on small screens -->
       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
-      <nav>
-      <div class="topnav" id="myTopnav">
-        <a href="index.html"><img class="logo" src="images/logo_wordmark_draft_400px.png" alt="Annex Garden logo" id = "logo">
-        <a href="index.html">Home</a>
-        <a href="gardening.html">Gardening</a>
-        <a href="beekeeping.html">Beekeeping</a>
-        <a href="resources.html">Resources</a>
-        <a href="contact.html" class="active">Contact</a>
-        <a href="javascript:void(0);" class="icon" onclick="myFunction()">
-          <i class="fa fa-bars"></i>
-        </a>
-      </nav>
+      
       </div>
   
     <!-- https://www.imarketinx.de/artikel/text-centered-on-image.html / https://codepen.io/drralte/pen/vYNexoe -->
-    <header id="main">
-      <div>
-      <h1>Contact</h1>
-      <p>Want to get in touch? Use the contact form below to leave me a message!</p>
-      <p>[contact form coming soon]</p>
-      </div>
+    <header>
+      <h1 id="main">Contact</h1>
+      <p class="page-header-paragraph">Please use the contact form below to leave me a message.</p>
     </header>
+ 
+  
+  <div id="form-container">
+    <div class="typewriter">
+      <div class="typewriter-text animation">Say hello!</div> </div>
+    <div class="underline">
+    </div>
+    <div class="icon_wrapper">
+    </div>
+    <form action="https://formspree.io/f/mjvjvjer" method="post" id="contact_form">
+      <div class="name">
+        <label for="name"></label>
+        <input type="text" placeholder="Name" name="name" id="name_input" required>
+      </div>
+      <div class="email">
+        <label for="email"></label>
+        <input type="email" placeholder="Telephone" name="email" id="email_input">
+      </div>
+      <div class="telephone">
+        <label for="name"></label>
+        <input type="text" placeholder="Email" name="telephone" id="telephone_input" required>
+      </div>
+      <div class="subject">
+        <label for="subject"></label>
+        <select placeholder="Subject line" name="subject" id="subject_input" required>
+          <option disabled hidden selected>I want to talk about...</option>
+          <option>I want to order some honey!</option>
+          <option>Let's talk about bees!</option>
+          <option>Let's talk about plants!</option>
+          <option>I have a garden tip to share!</option>
+        </select>
+      </div>
+      <div class="message">
+        <label for="message"></label>
+        <textarea name="message" placeholder="Write your message here" id="message_input" cols="30" rows="5" required></textarea>
+      </div>
+      <div class="submit">
+        <input type="submit" value="Send Message" id="form_button" />
+      </div>
+    </form><!-- // End form -->
+  </div><!-- // End #container -->
 
-    <main>
-      
+ </body>     
 
 
 
 </main>
-</body>
   
   <footer>
     <!-- Bootstrap footer instructions https://www.web-eau.net/blog/10-best-footer-html-css-snippets -->

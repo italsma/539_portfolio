@@ -61,7 +61,7 @@ body a {
   transform: rotateY(0deg);
 } */
 
-.card:hover .card-front {
+.card:hover .card-front, .card:focus-within {
   transform: rotateY(-180deg);
 }
 .card:hover .card-back {
@@ -149,7 +149,9 @@ body a {
 }
 .card-back h2 span {
   margin: 50% auto 35% auto;
-  font-size: 16px;
-  font-style:oblique;
+  font-size: 14px;
+  font-family: 'Open Sans', Verdana, Geneva, sans-serif;
+  font-weight: normal;
+  /* font-style:oblique; */
   font-family: 'Open Sans', Verdana, Geneva, sans-serif;
 }
