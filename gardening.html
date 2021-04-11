@@ -46,6 +46,7 @@
 
 <!-- Start body code -->
 <body>
+  
     <div a class="skip"><a href="#main">Skip to Main Content</a></div >
       <!-- Top Navigation Menu from https://www.w3schools.com/howto/howto_js_topnav_responsive.asp -->
       <!-- Load an icon library to show a hamburger menu (bars) on small screens -->
@@ -65,17 +66,17 @@
           </div>
         </nav>
       </div>
-    </header>
-  
-   
 
-    <main>
+    <header id="main">
        <!-- Flip card code based on: https://codepen.io/DmitryKorobov/pen/LrWxKO -->
-      <h1 id="main">Gardening</h1>
+      <h1>Gardening</h1>
       <p class="page-header-paragraph">I've been gardening for a couple of years and I try to mix up what I grow every season. After a few years of battling critters for my vegetables, I've decided to focus mainly on cut flowers for the 2021 season.</p>
-        <p class="page-header-supporting">Hover over any image to learn more about my favorite varieties.</p>
+      <!-- Tool tip text based on: https://www.w3schools.com/css/css_tooltip.asp -->
+        <p class="page-header-supporting tooltip">Click on any image to learn more about my favorite varieties.<span class="tooltiptext">Or hover on desktop!</p></span>
       </div>
+    </header>
     
+    <main>
       <div class = "gallery">
       
         <div class="card" tabindex="0">
@@ -141,10 +142,7 @@
           <div class="card-back">
               <h2 class="card-header">Peonies<br><span>Peonies are a early season bloomers and kick-off the growing season. They make beautiful, long-lasting indoor arrangements and smell incredible.</span></h2>
           </div>
-         </div>
-
-
-
+        </div>
       
         </div>
   </main>
@@ -158,5 +156,5 @@
     <p class="main-paragraph secondary-footer">&copy; Isabel Talsma – 2021</p></div>
   </footer>
 
-  </body>
+</body>
 </html>

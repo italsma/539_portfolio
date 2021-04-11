@@ -34,13 +34,15 @@
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
     gtag('js', new Date());
-  
+
     gtag('config', 'G-8YGLNFMPVF');
   </script>
 
   </head>
 
-
+<!-- Start body code -->
+<body>
+  
   <nav>
     <div class="topnav" id="myTopnav">
       <a class="topnav-logo" href="index.html"><img class="logo" src="images/logo_wordmark_draft_400px.png" alt="Annex Garden logo" id = "logo">
@@ -53,26 +55,26 @@
         <a href="resources.html">Resources</a>
         <a href="contact.html" class="active">Contact</a>
       </div>
-    </nav>
+  </nav>
 
-<!-- Start body code -->
-<main>
-<body>
-    <div a class="skip"><a href="#main">Skip to Main Content</a></div >
+  <div a class="skip"><a href="#main">Skip to Main Content</a></div>
       <!-- Top Navigation Menu from https://www.w3schools.com/howto/howto_js_topnav_responsive.asp -->
       <!-- Load an icon library to show a hamburger menu (bars) on small screens -->
       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-
-      
-      </div>
+  </div>
   
     <!-- https://www.imarketinx.de/artikel/text-centered-on-image.html / https://codepen.io/drralte/pen/vYNexoe -->
-    <header>
-      <h1 id="main">Contact</h1>
+  <header id="main">
+      <h1>Contact</h1>
       <p class="page-header-paragraph">Please use the contact form below to leave me a message.</p>
-    </header>
+  </header>
  
-  
+  <main>
+  <body onload="myFunction()" style="margin:0;">
+
+  <div id="loader"></div>
+
+  <div style="display:none;" id="myDiv" class="animate-bottom">
   <div id="form-container">
     <div class="typewriter">
       <div class="typewriter-text animation">Say hello!</div> </div>
@@ -98,7 +100,7 @@
 
       <div class="subject">
         <label for="subject_input" class="form-label">Subject Line</label>
-        <select placeholder="Subject line" name="subject" id="subject_input" required>
+        <select placeholder="Subject line" name="subject" id="subject_input" aria-label="Select a subject line" required>
           <option disabled hidden selected>I want to talk about...</option>
           <option>I want to order some honey!</option>
           <option>Let's talk about bees!</option>
@@ -117,13 +119,23 @@
       </div>
     </form><!-- // End form -->
   </div><!-- // End #container -->
+</div>
 
- </body>     
-
-
+<script>
+  var myVar;
+  
+  function myFunction() {
+    myVar = setTimeout(showPage, 3000);
+  }
+  
+  function showPage() {
+    document.getElementById("loader").style.display = "none";
+    document.getElementById("myDiv").style.display = "block";
+  }
+  </script>
 
 </main>
-  
+
   <footer>
     <!-- Bootstrap footer instructions https://www.web-eau.net/blog/10-best-footer-html-css-snippets -->
     <!-- Instagram icon instructions https://ionicons.com/usage -->
@@ -132,5 +144,5 @@
     <p class="main-paragraph secondary-footer">&copy; Isabel Talsma – 2021</p>
   </footer>
 
-  </body>
+</body>
 </html>
