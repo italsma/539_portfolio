@@ -436,8 +436,61 @@ figcaption{
 /*  */
 
 /* Contact Page - START */
-/* Typewriter effect based on code from: https://usefulangle.com/post/85/css-typewriter-animation */
 
+/* Loader text from W3Schools https://www.w3schools.com/howto/howto_css_loader.asp  */
+/* Center the loader */
+#loader {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  z-index: 1;
+  width: 120px;
+  height: 120px;
+  margin: -76px 0 0 -76px;
+  border: 8px dotted #BCD2B3;
+  border-radius: 50%;
+  border-top: 8px dotted #BCD2B3;
+  border-left: 8px dotted #A7C09D;
+  border-bottom: 8px dotted   #5B7C50;
+  -webkit-animation: spin 2s linear infinite;
+  animation: spin 5s linear infinite;
+}
+
+@-webkit-keyframes spin {
+  0% { -webkit-transform: rotate(0deg); }
+  100% { -webkit-transform: rotate(360deg); }
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+/* Add animation to "page content" */
+.animate-bottom {
+  position: relative;
+  -webkit-animation-name: animatebottom;
+  -webkit-animation-duration: 1.5s;
+  animation-name: animatebottom;
+  animation-duration: 1.5s
+}
+
+@-webkit-keyframes animatebottom {
+  from { bottom:-100px; opacity:0 } 
+  to { bottom:0px; opacity:1 }
+}
+
+@keyframes animatebottom { 
+  from{ bottom:-100px; opacity:0 } 
+  to{ bottom:0; opacity:1 }
+}
+
+#myDiv {
+  display: none;
+  text-align: center;
+}
+
+/* Typewriter effect based on code from: https://usefulangle.com/post/85/css-typewriter-animation */
 .typewriter {
   font-family: Courier, monospace;
   display: inline-block;
@@ -853,7 +906,7 @@ hr.solid {
 .grid-container {
   grid-template-columns: 1fr 1fr 1fr;
   row-gap: 20px;
-  column-gap: 20px;
+  column-gap: 20px; 
 }
 
 .banner-image {
@@ -862,6 +915,7 @@ hr.solid {
   background-position: center;  /* Parallax effect */
   background-repeat: no-repeat; /* Parallax effect */
   background-size: cover;       /* Parallax effect */
+  max-width: 100%;
   /* color: white; */
   /* height: 400px;                Parallax effect */
   height: 16vh;
@@ -875,11 +929,30 @@ hr.solid {
 }
 
 
-
 /*Media query to reduced-motion*/ 
 @media (prefers-reduced-motion: reduce) {
   .animation {
     animation: none;
+  }
+  /*Turn off spinner on contact page*/ 
+  @-webkit-keyframes spin {
+    0% { -webkit-transform: rotate(0deg); }
+    100% { -webkit-transform: rotate(0deg); }
+  }
+  
+  @keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(0deg); }
+  }
+  
+  @-webkit-keyframes animatebottom {
+    from { bottom:0px; opacity:1 } 
+    to { bottom:0px; opacity:1 }
+  }
+  
+  @keyframes animatebottom { 
+    from{ bottom:0px; opacity:1 } 
+    to{ bottom:0; opacity:1 }
   }
 
   /*Turn off parallax on resources page*/

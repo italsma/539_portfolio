@@ -6,6 +6,9 @@
 
 /* Garden Gallery */
 
+/* Tool tip text based on: https://www.w3schools.com/css/css_tooltip.asp*/
+/* Tooltip container */
+
 /* Flip card code based on: https://codepen.io/DmitryKorobov/pen/LrWxKO */
 .gallery{
   /* height: 1%; */
@@ -159,6 +162,60 @@ body a {
   font-family: 'Open Sans', Verdana, Geneva, sans-serif;
 }
 
+.tooltiptext {
+  display: none;
+}
+
+@media screen and (min-width:992px){
+ /* Garden Page Tooltip */ 
+ /* Tooltip container */
+ .tooltiptext {
+  display: inline-block;
+}
+
+.tooltip {
+  position: relative;
+  display: inline-block;
+  padding-bottom: 0;
+  border-bottom: 1px dotted black; /* If you want dots under the hoverable text */
+}
+
+ .tooltip .tooltiptext {
+  visibility: hidden;
+  width: 15vw;
+  background-color: #F7F6F3;
+  color: black;
+  text-align: center;
+  border: 3px solid #A7C09D;
+  border-radius: 6px;
+  padding: 5px 0;
+  box-shadow: 2px 2px 10px rgba(0,0,0,.2);
+  
+  /* Position the tooltip */
+  position: absolute;
+  z-index: 1;
+  top: 9px;
+  right: 102%;
+  margin-left: -22vw;
+}
+
+.tooltip:hover .tooltiptext {
+  visibility: visible;
+}
+
+.tooltip .tooltiptext::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 100%;
+  margin-top: -10px;
+  border-width: 10px;
+  border-style: solid;
+  border-color: transparent transparent transparent #A7C09D;
+}
+}
+
+
 @media screen and (max-width:992px), (prefers-reduced-motion: reduce) {
   /* Turn off flip card on Gardening page*/
   .card:hover .card-front, .card:focus-within {
@@ -192,5 +249,6 @@ body a {
     transform: none;
     opacity: 1;
   }
+  
 }
 
